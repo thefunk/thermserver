@@ -34,8 +34,8 @@ server = https.createServer options, (req, res) ->
                 res.end
         else
             console.log "Couldn't find file #{reqString}"
-		    res.writeHead 404
-		    #res.end "Nothing here"
+            res.writeHead 404
+            res.end "Nothing here"
 
 server.on 'secureConnection', (stream) ->
     console.log 'new secure connection'
